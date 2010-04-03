@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Op&ccedil;&otilde;es do Localizador de Objetos</title>
+	
+	<style type="text/css">
+		body {
+			background-color:  #345566;
+		}
+		.content{
+			width: 100%;
+			text-align: center;
+			position: relative;
+			float: right;
+			font-family: sans-serif ;
+			color: white;			
+		}
+	</style>
+	
+	<script type="text/javascript" src="options.js"></script>
+</head>
+<body onload="loadOptions()">
+	<img src="correios_64.png" width="64"  height="64"/>
+	<div class='content'>
+		<h1>Lista de Objetos</h1>
+		<p>Informar um ou mais identificadores de objetos, separados por v&iacute;rgula:</p>
+		<textarea id="identifiers" name="identifiers" rows="5" cols="40"></textarea>	
+		<br />
+		<button onclick="saveOptions()">Salvar</button>
+		<button onclick="eraseOptions()">Limpar</button>
+		<br/>
+		<div id="message"></div>
+	</div>
+</body>
+</html>

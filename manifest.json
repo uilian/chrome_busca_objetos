@@ -1,0 +1,18 @@
+{
+	"name": "Localizador Objetos nos Correios",
+	"options_page": "options.html",
+	"version": "0.1",
+	"author":"Uilian Souza",
+	"description": "Exibe a situação de um determinado objeto (ou lista de objetos) no sistema do Correio Brasileiro",
+	"icons":{"128":"correios_128.png", "64":"correios_64.png"},
+	"browser_action": {
+		"id": "findObject",
+		"default_icon":"correios.png",
+		"default_title": "Encontrar Objetos",
+		"popup": "popup.html"
+	},
+	"permissions": [
+		"http://*.correios.com.br/*",
+		"tabs"
+	]
+} 

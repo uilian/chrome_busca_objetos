@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script>
+			chrome.browserActions["findObject"].addListener(function(details) {
+				var tabId = details.data.tabId;
+				var tabUrl = details.data.tabUrl;
+				chrome.tabs.get(tabId, function(tab) {
+					chrome.tabs.create({url:"",index:tab.index+1});
+				});
+			});
+ 
+			chrome.tabs.onUpdated.addListener(function(tabId, chprops) {
+				chrome.tabs.getSelected(null, function(tab) {
+					chrome.pageActions.enableForTab("findObject", {
+						tabId: tab.id,
+						url: tab.url,
+						iconId: 0
+					});
+				});
+			});
+			
+			function goToCorreio() {
+				var urlCorreio = "http://websro.correios.com.br/sro_bin/txect01$.Inexistente?P_LINGUA=001&P_TIPO=002&P_COD_LIS=RB153202869HK,RB301815610HK,RT051260866HK,RT049722278HK";
+				//chrome.tabs.getAllInWindow(undefined, function(tabs) {
+				//	for (var i = 0, tab; tab = tabs[i]; i++) {
+				//		if (tab.url && isGmailUrl(tab.url)) {
+				//			chrome.tabs.update(tab.id, {selected: true});
+				//			return;
+				//		}
+				//	}
+					chrome.tabs.create({url: urlCorreio});
+				//});
+			}
+			
+		</script>
+	</head>
+</html>
