@@ -1,8 +1,8 @@
 Este projeto tem por objetivo apenas facilitar o acesso 
 e a consulta à página de busca de objetos disponível no 
-site dos Correios.
+próprio site dos Correios.
 
-Todos os logotipos, ícones e o código HTML que é exibido 
-na extensão são de autoria e pertence à Empresa Brasileira 
+Todos os logotipos, ícones e os códigos HTML que são exibidos 
+pela extensão são de autoria e pertencem à Empresa Brasileira 
 de Correios e Telégrafos.
 

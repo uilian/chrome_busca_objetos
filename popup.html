@@ -3,21 +3,14 @@
 	<style type="text/css">
 		body {width:500; height:400;}
 	</style>
-	<script type="text/javascript">
-
-		function setParams(){
-			var idList = localStorage["objIdentifiers"];
-			url = "http://websro.correios.com.br/sro_bin/txect01$.Inexistente?P_LINGUA=001&P_TIPO=002&P_COD_LIS=";
-			url = url + idList;
-			document.getElementById('iContent').src= url;			
-		}
-		
-	</script>
+     <script type="text/javascript" src="jquery.min.js"></script>
+     <script type="text/javascript" src="popup.js"></script>		
 </head>
-<body onload="setParams();">
+<body>
 	<iframe id="iContent" src="" width="100%" height="100%" frameborder="0">
 	</iframe>
-	<p style="font: 11px italic serif; color: navy;text-align: center;">by <a href="http://uilian.tumblr.com/" target="_blank">Uilian Souza</a></p>
-		
+	<p style="font: 11px italic serif; color: navy;text-align: center;">
+		by <a href="http://www.uilian.com/" target="_blank">Uilian Souza</a>
+	</p>		
 </body>
 </html>

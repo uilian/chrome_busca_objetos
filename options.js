@@ -1,21 +1,28 @@
-var defaultId= "";
+var defaultId;
+
+$(document).ready( function() {
+	defaultId= "";
+	window.addEventListener("load", loadOptions);
+	//$("#saveOpts").addEventListener("click",saveOptions);
+	$('#saveOpts').on('click', saveOptions);
+	//$("#eraseOpts").addEventListener("click",eraseOptions);
+	$('#eraseOpts').on('click', eraseOptions);
+});
+
+
 
 function loadOptions() {
 	var idList = localStorage["objIdentifiers"];
-
 	if (idList == undefined) {
 		idList = defaultId;
 	}
-
-	var textarea = document.getElementById("identifiers");
-	textarea.value = idList;
+	$("#identifiers").val(idList);
 }
 
 function saveOptions() {
-	var textarea = document.getElementById("identifiers");
-	var idList = textarea.value;
+	var idList = $("#identifiers").val();
 	localStorage["objIdentifiers"] = idList;
-	document.getElementById("message").innerHTML = "Salvo com sucesso!";
+	$("#message").innerHTML = "Salvo com sucesso!";
 }
 
 function eraseOptions() {
