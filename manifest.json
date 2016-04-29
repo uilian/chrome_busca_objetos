@@ -3,7 +3,7 @@
 	"short_name": "Tracking Objetos",
 	"manifest_version": 2,
 	"options_page": "options.html",
-	"version": "0.2",
+	"version": "0.3",
 	"author":"Uilian Souza",
 	"description": "Exibe a situação de um determinado objeto (ou lista de objetos) no sistema do Correio Brasileiro",
 	"icons":{"128":"correios_128.png", "64":"correios_64.png"},

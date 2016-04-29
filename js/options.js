@@ -22,7 +22,7 @@ function loadOptions() {
 function saveOptions() {
 	var idList = $("#identifiers").val();
 	localStorage["objIdentifiers"] = idList;	
-   $("#message").fadeIn(400);
+   $("#message").fadeIn(800).delay(3000).fadeOut(800);
 }
 
 function eraseOptions() {
