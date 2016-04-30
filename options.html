@@ -7,49 +7,63 @@
       .container {
          margin-top: 20px;
       }     
+      .vertical-center {
+        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh; /* These two lines are counted as one :-)       */
+        display: flex;
+        align-items: center;
+      }
    </style>	
    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
-
 </head>
 <body>
-   <div class="container col-md-5">
-      <div class="row col-md-offset-1">
-         <div class="panel panel-info">
-            <div class="panel-heading">
-               <h3>Editar lista de objetos</h3>            
-            </div>
-            <div class="panel-body">
-               <div id="message" class="alert alert-success" style="display:none">
-                  <a href="#" class="close" data-dismiss="alert">&times;</a>
-                  <strong>Sucesso</strong>, suas altera&ccedil;&otilde;es foram salvas!
+   <div class="col-md-12 vertical-center">
+      <div class="container col-md-4 text-left">      
+         <div class="row">
+            <div class="panel panel-info">         
+               <div class="panel-heading">                              
+                  <h4>
+                     <span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>
+                     &nbsp; Op&ccedil;&otilde;es do Localizador de Objetos
+                  </h4>
                </div>
-               <p class="lead">
-                  Informar um ou mais identificadores de objetos, separados por v&iacute;rgula:
-               </p>
-               <textarea class="form-control" id="identifiers" name="identifiers" rows="3">
-               </textarea>	
-               <br />
-               <button id="saveOpts" class="btn btn-primary">Salvar</button>
-               <button id="eraseOpts" class="btn btn-default">Limpar</button>
-               <br/>
-            </div>
-            <div class="panel-footer text-muted small">
-               <p><strong>Informa&ccedil;&otilde;es legais</strong></p>
-               <p>
-               Este plugin tem por objetivo apenas facilitar o acesso 
-               e a consulta &agrave; p&aacute;gina de busca de objetos dispon&iacute;vel no 
-               pr&oacute;prio site dos Correios.
-               </p>
-               <p>
-               Todos os logotipos, &iacute;cones e os c&oacute;digos HTML que s&atilde;o exibidos 
-               pela extens&atilde;o s&atilde;o de autoria e pertencem &agrave; Empresa Brasileira 
-               de Correios e Tel&eacute;grafos.
-               </p>
-               <p>
-               Os c&oacute;digos de rastreio salvos ser&atilde;o mantidos APENAS no seu computador, em 
-               respeito &agrave; sua privacidade. 
-               </p>
+               <div class="panel-body">
+                  <div id="message" class="alert alert-success" style="display:none">
+                     <a href="#" class="close" data-dismiss="alert">&times;</a>
+                     <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;
+                     <strong>Sucesso</strong>, suas altera&ccedil;&otilde;es foram salvas!                  
+                  </div>
+                  <p>
+                     Informe um ou mais identificadores de objetos, separados por v&iacute;rgula:
+                  </p>
+                  <textarea class="form-control" id="identifiers" name="identifiers" rows="3">
+                  </textarea>	
+                  <br />
+                  <button id="saveOpts" class="btn btn-primary">Salvar</button>
+                  <button id="eraseOpts" class="btn btn-default">Limpar</button>
+                  <br/>
+               </div>
+               <div class="panel-footer text-muted small">
+                  <p><strong>Informa&ccedil;&otilde;es legais</strong></p>
+                  <p>
+                  Este plugin tem por objetivo apenas facilitar o acesso 
+                  e a consulta &agrave; p&aacute;gina de busca de objetos dispon&iacute;vel no 
+                  pr&oacute;prio site dos Correios.
+                  </p>
+                  <p>
+                  Todos os logotipos, &iacute;cones e os c&oacute;digos HTML que s&atilde;o exibidos 
+                  pela extens&atilde;o s&atilde;o de autoria e pertencem &agrave; Empresa Brasileira 
+                  de Correios e Tel&eacute;grafos.
+                  </p>
+                  <p>
+                  Os c&oacute;digos de rastreio salvos ser&atilde;o mantidos APENAS no seu computador, em 
+                  respeito &agrave; sua privacidade. 
+                  </p>
+                  <p class="text-info text-center">
+                     <a href="http://www.uilian.com/" target="_blank">http://www.uilian.com/</a>
+                  </p>     
+               </div>
             </div>
          </div>
       </div>
@@ -58,6 +72,6 @@
    <script type="text/javascript" src="js/jquery.min.js"></script>
    <script type="text/javascript" src="js/options.js"></script>
    <script type="text/javascript" src="js/bootstrap.min.js"></script>   
-   <script type="text/javascript" src="js/jquery.soap.js"></script>     
+   <script type="text/javascript" src="js/bootbox.min.js"></script>     
 </body>
 </html>

@@ -26,6 +26,14 @@ function saveOptions() {
 }
 
 function eraseOptions() {
-	localStorage.removeItem("objIdentifiers");
-	location.reload();
+	bootbox.confirm(
+		"Todos os itens ser&atilde;o removidos, deseja continuar?", 
+		function(result) {
+			if (result){
+				localStorage.removeItem("objIdentifiers");				
+				$("#identifiers").val("");
+				$("#message").fadeIn(800).delay(3000).fadeOut(800);
+			}
+		}
+	);
 }
