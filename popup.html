@@ -1,19 +1,67 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<style type="text/css">
-		body {
-         width:500; 
-         height:400;
+   <title>Op&ccedil;&otilde;es do Localizador de Objetos</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style type="text/css">
+      body {
+         width:400px; 
+         height:400px;
+      }   
+      .vertical-center {
+        min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh; /* These two lines are counted as one :-)       */
+        display: flex;
+        align-items: center;
       }
-	</style>
+   </style> 
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+   <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
 </head>
 <body>
-   <iframe id="iContent" src="" width="100%" height="100%" frameborder="0">
-   </iframe>
-   <p style="font: 11px italic serif; color: navy;text-align: center;">
-      by <a href="http://www.uilian.com/" target="_blank">Uilian Souza</a>
-   </p>     
+   <div class="col-md-12 vertical-center">
+      <div class="row">
+         <div class="panel panel-info">         
+            <div class="panel-heading">
+               <h6>
+                  <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+                  &nbsp; Op&ccedil;&otilde;es do Localizador de Objetos
+               </h6>
+            </div>
+            <div class="panel-body">
+               <table id="table_id">
+                   <thead>
+                       <tr>
+                           <th>Column 1</th>
+                           <th>Column 2</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>Row 1 Data 1</td>
+                           <td>Row 1 Data 2</td>
+                       </tr>
+                       <tr>
+                           <td>Row 2 Data 1</td>
+                           <td>Row 2 Data 2</td>
+                       </tr>
+                   </tbody>
+               </table> 
+            </div>
+            <div class="panel-footer text-muted small">
+               <p class="text-info text-center">
+                  <a href="http://www.uilian.com/" target="_blank">http://www.uilian.com/</a>
+               </p>     
+            </div>
+         </div>
+      </div>
+   </div> 
    <script type="text/javascript" src="js/jquery.min.js"></script>
-   <script type="text/javascript" src="js/popup.js"></script>		
+   <script type="text/javascript" src="js/options.js"></script>
+   <script type="text/javascript" src="js/bootstrap.min.js"></script>   
+   <script type="text/javascript" src="js/bootbox.min.js"></script>
+   <script type="text/javascript" src="datatables/datatables.min.js"></script>
+   <script type="text/javascript" src="js/popup.js"></script>        
 </body>
 </html>
